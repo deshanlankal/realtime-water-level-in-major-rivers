@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hourly Gauge Level Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <form id="hourlyForm">
+        <label for="stationName">Station Name:</label>
+        <input type="text" id="stationName" name="stationName" required>
+        <br><br>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+        <br><br>
+        <label for="startHour">Start Hour:</label>
+        <input type="number" id="startHour" name="startHour" min="0" max="23" required>
+        <br><br>
+        <label for="endHour">End Hour:</label>
+        <input type="number" id="endHour" name="endHour" min="0" max="23" required>
+        <br><br>
+        <button type="submit">Generate Chart</button>
+    </form>
+    
+    <canvas id="hourlyChart" width="800" height="400"></canvas>
+
+    <script src="fetch_hourly_data.js"></script>
+</body>
+</html>

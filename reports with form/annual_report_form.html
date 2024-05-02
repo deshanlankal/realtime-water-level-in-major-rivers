@@ -1,0 +1,24 @@
+<!-- monthly_report_form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annual Report Form</title>
+</head>
+<body>
+    <h2>Generate Monthly Report</h2>
+    <form action="view_monthly_report.php" method="get">
+        <label for="station_name">Station Name:</label>
+        <input type="text" id="station_name" name="station_name" required>
+        <br><br>
+        <label for="start_date">Start Date:</label>
+        <input type="date" id="start_date" name="start_date" required>
+        <br><br>
+        <label for="end_date">End Date:</label>
+        <input type="date" id="end_date" name="end_date" required>
+        <br><br>
+        <input type="submit" value="Generate Report">
+    </form>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gauge Data Entry Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="date"],
+        input[type="time"],
+        textarea {
+            width: calc(100% - 12px);
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 80px;
+            resize: vertical;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        input[type="submit"],
+        .view-btn {
+            flex: 1;
+            padding: 10px;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"] {
+            background-color: #4caf50;
+        }
+        .view-btn {
+            background-color: #007bff;
+        }
+        input[type="submit"]:hover,
+        .view-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Gauge Data Entry Form</h2>
+        <form action="process_form.php" method="post">
+            <label for="river_basin">River Basin:</label>
+            <input type="text" id="river_basin" name="river_basin" required>
+            
+            <label for="tributary">Tributary/River:</label>
+            <input type="text" id="tributary" name="tributary" required>
+            
+            <label for="station_name">Station Name:</label>
+            <input type="text" id="station_name" name="station_name" required>
+            
+            <label for="alert_level">Alert Level:</label>
+            <input type="text" id="alert_level" name="alert_level" required>
+            
+            <label for="minor_flood_level">Minor Flood Level:</label>
+            <input type="text" id="minor_flood_level" name="minor_flood_level" required>
+            
+            <label for="major_flood_level">Major Flood Level:</label>
+            <input type="text" id="major_flood_level" name="major_flood_level" required>
+            
+            <label for="current_gauge_level">Current Gauge Level:</label>
+            <input type="text" id="current_gauge_level" name="current_gauge_level" required>
+            
+            <label for="remarks">Remarks:</label>
+            <textarea id="remarks" name="remarks"></textarea>
+            
+            <label for="gauge_collected_date">Gauge collected Date:</label>
+            <input type="date" id="gauge_collected_date" name="gauge_collected_date" required>
+            
+            <label for="gauge_collected_time">Gauge collected Time:</label>
+            <input type="time" id="gauge_collected_time" name="gauge_collected_time" required>
+            
+            <label for="gauge_collected_person_name">Gauge collected person name:</label>
+            <input type="text" id="gauge_collected_person_name" name="gauge_collected_person_name" required>
+            
+            <label for="gauge_entered_person_name">Gauge entered person name:</label>
+            <input type="text" id="gauge_entered_person_name" name="gauge_entered_person_name" required>
+            
+            <div class="button-container">
+                <input type="submit" value="Submit">
+                <a href="view_data.html" class="view-btn">View Data</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
